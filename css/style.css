@@ -142,6 +142,13 @@ canvas{
   background: none;
   color: #fff;
 }
+.leaderboard ul li small {
+  position: relative;
+  z-index: 2;
+  display: block;
+  text-align: right;
+  color: #fff;
+}
 .the-most {
   position: fixed;
   z-index: 1;
