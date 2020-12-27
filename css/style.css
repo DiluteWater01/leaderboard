@@ -24,7 +24,7 @@ canvas{
 }
 
 
-/* ---- stats.js ---- */
+/* ---- stats.js ----
 
 .count-particles{
   background: #000022;
@@ -62,7 +62,7 @@ canvas{
   border-radius: 0 0 3px 3px;
 }
 
-
+*/
 /* ---- particles.js container ---- */
 
 #particles-js{
