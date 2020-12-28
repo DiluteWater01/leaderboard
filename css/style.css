@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
-
+canvas:focus{outline:none;}
 html,body{ 
 	width:100%;
 	height:100%;
@@ -14,13 +14,15 @@ html{
 
 body{
   font-family: 'Iceland', cursive;
-  /*font:normal 75% Arial, Helvetica, sans-serif;*/
+  border-collapse: collapse;
+  padding: 0; 
+  margin: 0;
   background-attachment: fixed;
 }
 
 canvas{
   display:block;
-  vertical-align:bottom;
+  vertical-align:top;
   background-attachment: fixed;
 }
 
@@ -31,7 +33,6 @@ canvas{
   height: 100%;
   position:fixed;
   background-color: #000000;
-  background-image: url('');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -39,7 +40,7 @@ canvas{
 .leaderboard {
   font-family: 'Iceland', cursive;
   position: absolute;
-  top: 120%;
+  top: 110%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 440px;
@@ -159,7 +160,7 @@ canvas{
   left: 0;
   width: 50vw;
   max-width: 200px;
-  padding: 10px;
+  padding: 0px;
 }
 .the-most img {
   max-width: 100%;
