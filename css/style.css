@@ -6,6 +6,7 @@ html,body{
 	background:#111;
 	background-attachment: fixed;
 }
+a { color: inherit; } 
 ::-webkit-scrollbar {
   width: 20px;
 }
