@@ -58,7 +58,7 @@ canvas{
   top: 110%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 440px;
+  width: 420px;
   height: 1490px;
   background: linear-gradient(to bottom, #3a404d, #181c26);
   border-radius: 10px;
