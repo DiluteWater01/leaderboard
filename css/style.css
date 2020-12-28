@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
 
 html,body{ 
 	width:100%;
@@ -13,7 +13,8 @@ html{
 }
 
 body{
-  font:normal 75% Arial, Helvetica, sans-serif;
+  font-family: 'Iceland', cursive;
+  /*font:normal 75% Arial, Helvetica, sans-serif;*/
   background-attachment: fixed;
 }
 
@@ -36,19 +37,20 @@ canvas{
   background-repeat: no-repeat;
 }
 .leaderboard {
+  font-family: 'Iceland', cursive;
   position: absolute;
-  top: 100%;
+  top: 120%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
-  height: 1285px;
+  width: 440px;
+  height: 1490px;
   background: linear-gradient(to bottom, #3a404d, #181c26);
   border-radius: 10px;
   box-shadow: 0 7px 30px rgba(57, 255, 20, 0.3);
 }
 
 .leaderboard h1 {
-  font-size: 24px;
+  font-size: 35px;
   color: #39ff14;
   padding: 12px 13px 18px;
 }
@@ -56,12 +58,13 @@ canvas{
 .leaderboard ol {
   counter-reset: leaderboard;
   color: #39ff14;
+  padding: 18px 10px 18px 50px;
 }
 
 .leaderboard ol li {
   position: relative;
   z-index: 1;
-  font-size: 18px;
+  font-size: 29px;
   counter-increment: leaderboard;
   padding: 18px 10px 18px 50px;
   cursor: pointer;
@@ -121,7 +124,7 @@ canvas{
 .leaderboard ul li {
   position: relative;
   z-index: 1;
-  font-size: 16px;
+  font-size: 24px;
   counter-increment: leaderboard;
   padding: 18px 10px 18px 50px;
   cursor: pointer;
