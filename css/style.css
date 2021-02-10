@@ -180,3 +180,9 @@ canvas{
 .the-most img {
   max-width: 100%;
 }
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
