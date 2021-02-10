@@ -1538,7 +1538,7 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
   $(function() {
     $( window ).konami({
       cheat: function() {
-        window.open("https://leaderboard.redcrypt.ml/vqervre");
+        alert('Cheat code with message');
       } 
     });
   });
