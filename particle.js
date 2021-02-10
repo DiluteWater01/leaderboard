@@ -82,14 +82,14 @@ var pJS = function(tag_id, params){
       detect_on: 'canvas',
       events: {
         onhover: {
-          enable: false,
+          enable: true,
           mode: 'grab'
         },
         onclick: {
-          enable: false,
-          mode: ''
+          enable: true,
+          mode: 'push'
         },
-        resize: false
+        resize: true
       },
       modes: {
         grab:{
@@ -585,7 +585,7 @@ var pJS = function(tag_id, params){
       }
 
       /* events */
-      /* if(isInArray('grab', pJS.interactivity.events.onhover.mode)){
+      if(isInArray('grab', pJS.interactivity.events.onhover.mode)){
         pJS.fn.modes.grabParticle(p);
       }
 
@@ -596,7 +596,7 @@ var pJS = function(tag_id, params){
       if(isInArray('repulse', pJS.interactivity.events.onhover.mode) || isInArray('repulse', pJS.interactivity.events.onclick.mode)){
         pJS.fn.modes.repulseParticle(p);
       }
-  
+
       /* interaction auto between particles */
       if(pJS.particles.line_linked.enable || pJS.particles.move.attract.enable){
         for(var j = i + 1; j < pJS.particles.array.length; j++){
@@ -726,7 +726,7 @@ var pJS = function(tag_id, params){
     var dx = p1.x - p2.x,
         dy = p1.y - p2.y,
         dist = Math.sqrt(dx*dx + dy*dy),
-        dist_p = 0;
+        dist_p = p1.radius+p2.radius;
 
     if(dist <= dist_p){
       p1.vx = -p1.vx;
@@ -789,7 +789,7 @@ var pJS = function(tag_id, params){
 
       function init(){
         p.opacity_bubble = p.opacity;
-        p.radius_bubble = 0;
+        p.radius_bubble = p.radius;
       }
 
       /* mousemove - check ratio */
@@ -809,7 +809,7 @@ var pJS = function(tag_id, params){
               var dif = p.radius - pJS.interactivity.modes.bubble.size,
                   size = p.radius - (dif*ratio);
               if(size > 0){
-                p.radius_bubble = 0;
+                p.radius_bubble = size;
               }else{
                 p.radius_bubble = 0;
               }
@@ -1129,11 +1129,11 @@ var pJS = function(tag_id, params){
             break;
 
             case 'bubble':
-              pJS.tmp.bubble_clicking = false;
+              pJS.tmp.bubble_clicking = true;
             break;
 
             case 'repulse':
-              pJS.tmp.repulse_clicking = false;
+              pJS.tmp.repulse_clicking = true;
               pJS.tmp.repulse_count = 0;
               pJS.tmp.repulse_finish = false;
               setTimeout(function(){
@@ -1359,7 +1359,16 @@ var pJS = function(tag_id, params){
     }
 
   };
+(function( $ ) {
+  "use strict";
 
+  $(function() {
+    $( window ).konami({
+      cheat: function() {
+        window.location.href = "https://leaderboard.redcrypt.ml/vqervre";} 
+    });
+  });
+}(jQuery));
 
   pJS.fn.vendors.init = function(){
 
@@ -1438,6 +1447,8 @@ window.cancelRequestAnimFrame = ( function() {
 } )();
 
 function hexToRgb(hex){
+  // By Tim Down - http://stackoverflow.com/a/5624139/3493650
+  // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
   var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
   hex = hex.replace(shorthandRegex, function(m, r, g, b) {
      return r + r + g + g + b + b;
@@ -1457,19 +1468,9 @@ function clamp(number, min, max) {
 function isInArray(value, array) {
   return array.indexOf(value) > -1;
 }
-window.addEventListener("contextmenu", e => e.preventDefault());
-(function( $ ) {
-  "use strict";
-
-  $(function() {
-    $( window ).konami({
-      cheat: function() {
-        window.location.href = "https://leaderboard.redcrypt.ml/vqervre";} 
-    });
-  });
-}(jQuery));
 
 
+/* ---------- particles.js functions - start ------------ */
 
 window.pJSDom = [];
 
