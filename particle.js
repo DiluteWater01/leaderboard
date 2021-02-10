@@ -2,6 +2,7 @@ var pJS = function(tag_id, params){
 
   var canvas_el = document.querySelector('#'+tag_id+' > .particles-js-canvas-el');
 
+  /* particles.js variables with default values */
   this.pJS = {
     canvas: {
       el: canvas_el,
@@ -1358,16 +1359,7 @@ var pJS = function(tag_id, params){
     }
 
   };
-(function( $ ) {
-  "use strict";
 
-  $(function() {
-    $( window ).konami({
-      cheat: function() {
-        window.location.href = "https://leaderboard.redcrypt.ml/vqervre";} 
-    });
-  });
-}(jQuery));
 
   pJS.fn.vendors.init = function(){
 
